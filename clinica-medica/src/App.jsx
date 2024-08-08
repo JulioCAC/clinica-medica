@@ -7,9 +7,13 @@ const App = () => {
   return (
     <BrowserRouter>
     <Navbar/>
-      <Routes>
+    <div className="container">
+    <Routes>
         <Route path="/" element={<PacienteList/>} />
-      </Routes>
+        <Route path="/listar-pacientes" element={<PacienteList/>}/>
+    </Routes> 
+    </div>
+    
     </BrowserRouter>
   )
 }
