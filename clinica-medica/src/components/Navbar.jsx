@@ -10,10 +10,12 @@ const Navbar = () => {
             </Link>
         </div>
         <div className="menu-links">
-            <Link to="/add-funcionario">Adicionar Funcionario</Link>
-            <Link to="/listar-funcionario">Listar Funcionario</Link>
             <Link to="/add-paciente">Adicionar Paciente</Link>
             <Link to="/listar-pacientes">Listar Paciente</Link>
+            <Link to="/add-medico">Adicionar Médico</Link>
+            <Link to="/listar-medico">Listar Médico</Link>
+            <Link to="/add-especialidade">Adicionar Especilidade</Link>
+            <Link to="/listar-especialidade">Listar Especialidade</Link>
         </div>
 
     </nav>
