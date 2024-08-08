@@ -13,7 +13,7 @@ const Navbar = () => {
             <Link to="/add-funcionario">Adicionar Funcionario</Link>
             <Link to="/listar-funcionario">Listar Funcionario</Link>
             <Link to="/add-paciente">Adicionar Paciente</Link>
-            <Link to="/listar-paciente">Listar Paciente</Link>
+            <Link to="/listar-pacientes">Listar Paciente</Link>
         </div>
 
     </nav>
