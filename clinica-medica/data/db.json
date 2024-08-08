@@ -1,0 +1,10 @@
+{
+  "pacientes": [
+    {
+      "id": 1,
+      "nome": "teste",
+      "cpf": "050.292.026-25",
+      "email": "teste@gmail.com"
+    }
+  ]
+}
