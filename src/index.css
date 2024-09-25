@@ -1,68 +1,103 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
+.menu {
+  background: linear-gradient(135deg, #007bff, #28a745); /* Azul e verde */
+  padding: 20px 20px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.menu .menu-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  height: 40px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+  border-radius: 5px;
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo leve no hover */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.menu a.active {
+  background-color:#d6d6d6 ; /* teste depois com #28a745 / #0056b3   */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+  color: #000000;
+}
+
+.menu .logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.menu .logo-img {
+  height: 80px;
+  transform: translateY(10px);
+  object-fit: contain;
+}
+
+/* Avatar e Dropdown */
+.avatar-container {
+  position: relative;
+}
+
+.avatar-icon {
+  font-size: 2rem;
+  color: #ffffff;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu a {
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #495057;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
   }
-  a:hover {
-    color: #747bff;
+
+  .menu .menu-links {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .menu .logo-container {
+    width: 100%;
+    justify-content: center;
   }
 }
